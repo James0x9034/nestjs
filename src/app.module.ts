@@ -11,7 +11,7 @@ import { join } from 'path';
     UsersModule,
     ConfigModule.forRoot({
       isGlobal: true,
-      envFilePath: `.${process.env.NODE_ENV}.env`,
+      envFilePath: `.env.${process.env.NODE_ENV}`,
     }),
     MongooseModule.forRootAsync({
       imports: [ConfigModule],
